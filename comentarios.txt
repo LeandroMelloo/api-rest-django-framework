@@ -1,0 +1,27 @@
+Configuração do Projeto Django
+
+1° Passo: criar o nosso ambiente virtual: python -m venv django_rest_env
+2° Passo: ativar nosso ambiente virtual no windows: .\django_rest_env\Scripts\Activate.ps1
+3° Passo: instalar a biblioteca django: pip install django
+4° Passo: crie um projeto chamado setup utilizando o Django admin, para manter toda configuração de nossa aplicação: django-admin startproject setup .
+5° Passo: para finalizar a configuração do ambiente, na pasta setup, altere no arquivo settings.py o idioma e o horário que usaremos na aplicação, incluindo as seguintes linhas de código: LANGUAGE_CODE = 'pt-br',
+TIME_ZONE = 'America/Sao_Paulo'
+6° Passo: comando para criar uma aplicação: python manage.py startapp escola
+7° Passo: comando para inicializar o servidor django: python manage.py runserver
+
+
+Configuração do Django Rest Frameworks
+8° Passo: pip install djangorestframework
+9° Passo: pip install markdown
+10° Passo: pip install django-filter
+11° Passo: inserir o django rest Framework no projeto: settings.py, insirir 'rest_framework'
+
+Atualização dp pip
+pip install --upgrade pip
+
+Configuração das migrates
+12° Passo: comando para criar as migrations: python manage.py makemigrations
+13° Passo: comando para subir as migrations: python manage.py migrate
+
+Configuração do Django Admin
+14° Passo: configurando o usuario admin: python manage.py createsuperuser
