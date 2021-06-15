@@ -25,3 +25,6 @@ Configuração das migrates
 
 Configuração do Django Admin
 14° Passo: configurando o usuario admin: python manage.py createsuperuser
+
+Comando para verificar se tem bibliotecas instaladas: pip freeze
+Comando para instalar as dependencias do projeto: pip install -r requirements.txt
