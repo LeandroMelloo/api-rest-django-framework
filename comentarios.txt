@@ -36,3 +36,33 @@ Instalar biblioteca Gunicorn: pip install gunicorn
 Servidor HTTP WSGI WEB Python
 
 Comando para atualizar nosso arquivo .txt: pip freeze > requirements.txt
+
+Instalação e configuração do deploy no Heroku
+
+1° Instalar o Heroku CLI.
+2° Fazer o Download e a instalação do Heroku CLI.
+
+$ heroku login
+Create a new Git repository
+Initialize a git repository in a new or existing directory
+
+$ cd my-project/
+$ git init
+$ heroku git:remote -a django-rest-frame-clientes
+Deploy your application
+Commit your code to the repository and deploy it to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+You can now change your main deploy branch from "master" to "main" for both manual and automatic deploys, please follow the instructions here.
+Existing Git repository
+For existing repositories, simply add the heroku remote
+
+$ heroku git:remote -a django-rest-frame-clientes
+
+Fazendo a migração das tabelas pro Heroku
+heroku run python manage.py migrate
+
+Criando um super user
+heroku run python manage.py createsuperuser
