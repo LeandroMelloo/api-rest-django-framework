@@ -31,3 +31,8 @@ Comando para instalar as dependencias do projeto: pip install -r requirements.tx
 
 Biblioteca para validação do cpf, cnpj em python
 Comando: pip install validate-docbr
+
+Instalar biblioteca Gunicorn: pip install gunicorn
+Servidor HTTP WSGI WEB Python
+
+Comando para atualizar nosso arquivo .txt: pip freeze > requirements.txt
