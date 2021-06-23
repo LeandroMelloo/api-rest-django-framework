@@ -26,6 +26,7 @@ Configuração das migrates
 Configuração do Django Admin
 14° Passo: configurando o usuario admin: python manage.py createsuperuser
 
+==========================================================================================================
 Comando para verificar se tem bibliotecas instaladas: pip freeze
 Comando para instalar as dependencias do projeto: pip install -r requirements.txt
 
@@ -37,6 +38,7 @@ Servidor HTTP WSGI WEB Python
 
 Comando para atualizar nosso arquivo .txt: pip freeze > requirements.txt
 
+==========================================================================================================
 Instalação e configuração do deploy no Heroku
 
 1° Instalar o Heroku CLI.
@@ -66,3 +68,31 @@ heroku run python manage.py migrate
 
 Criando um super user
 heroku run python manage.py createsuperuser
+
+==========================================================================================================
+Tipos de Versionamento - Django Rest Framework
+
+AcceptHeaderVersioning
+    - Transferência do número da versão através do cabeçalho da requisição
+    - exemplo:
+        - GET /alunos/HTTP/1.1
+          HOST: exemplo.com
+          Accept: application/json; version=1.0 
+
+URLPathVersioning
+    - Adiciona a versão no endereço do recurso de uma variável (o caminho é especificado no DRF por meio de parâmetro VERSION_PARAM)
+    - exemplo:
+        - urlpatterns = [url(r'^(?P<version>(v1|v2))/alunos/$', alunos_listname='alunos-lista')]
+
+NamespaceVersioning
+    - Aversão é fornecida através do namespace da url
+    - exemplo:
+        - urlpatterns = [
+            url(r'^v1/alunos/', include(alunos.urls', namespace='v1')),
+            url(r'^v2/alunos/', include(alunos.urls', namespace='v2'))
+        ]
+
+HostNameVersioning
+    - A versão é definida pelo seu dominio 
+        - http://v1.exemplo.com/alunos/
+        - http://v2.exemplo.com/alunos/
