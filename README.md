@@ -1,2 +1,2 @@
-# curso_alura_api_rest_django
-API Django3 Rest Framework
+# Api Rest com Django Restframework
+Api Rest com Django Restframework
